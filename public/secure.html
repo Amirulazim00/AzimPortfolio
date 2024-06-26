@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script defer src="secure.js"></script>
+    <style>
+        body,html {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            overflow-x:hidden;
+        }
+
+        .carousel {
+            display: flex;
+            overflow: hidden;
+           height:80%;
+           margin-bottom:0;
+        }
+
+        .carousel-slide {
+            flex: 0 0 100%;
+        }
+
+        img {
+            width: 70%;
+            height:100%;
+      
+        }
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Media queries for responsiveness */
+@media (max-width: 559px) {
+.nav-links ul{
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+
+}
+
+/* Header styles */
+.header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.logo {
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+
+h1 {
+    margin: 0;
+}
+
+ #about_div p {
+        margin-bottom: 1.5em; /* Adjust the value to control the spacing */
+    }
+#about_div h2 {
+        margin-bottom: 1.5em; /* Adjust the value to control the spacing */
+    }
+/* Change the navigation links to gray buttons with white text */
+.nav-links{
+    text-align: center;
+}
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links li {
+    margin: 0; /* Remove the margin to eliminate space between links */
+    padding: 0; /* Remove the padding to eliminate space between links */
+    justify-content: center;
+}
+
+/*  the navigation links to gray rectangular buttons with white text */
+.nav-links a {
+    text-decoration: none;
+    padding: 10px 20px;
+    background: #333; 
+    color: #fff; 
+    border-radius: 0;
+}
+
+
+/* On hover, change the background to yellow and text to white */
+.nav-links a:hover {
+    background: #f2b01d; /* Yellow background color on hover */
+    color: #fff; /* White text color on hover */
+}
+
+
+
+
+/* Hero section styles */
+
+
+#hero-sec {
+    position: relative;
+}
+
+.talk {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: #333;
+}
+
+.text {
+    flex: 1;
+    padding-left: 40px;
+    color: #fff;
+}
+
+.image {
+    max-width: 400px;
+    max-height: 400px;
+    padding-right: 60px;
+}
+
+.headline, p {
+    margin-bottom: 1.5em; /* Adjust the value to control the spacing */
+}
+
+.talk .text ul, li {
+    margin-bottom: 1.5em; /* Adjust the value to control the spacing */
+}
+
+.talk .text p {
+    margin-top: 1.5em;
+    color: #f2b01d;
+    font-weight: bold;
+}
+#about_div{
+margin-top:0;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .talk {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image {
+        padding-right: 0;
+        max-width: 100%; /* Adjust as needed */
+        
+    }
+
+    .text {
+        padding-left: 0;
+    }
+}
+
+
+.cta-button {
+    background: #f2b01d;
+    color: #333;
+    padding: 10px 20px ;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+         /* Services section styles */
+        #services {
+            background: #f9f9f9;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .service-card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .service-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            flex: 0 0 calc(40% - 20px); /* Adjusted for two cards in a row */
+        }
+
+
+/* About section styles */
+#about {
+    background: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Contact section styles */
+#contact {
+    background: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+input, textarea, button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background: #f2b01d;
+    color: #000;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Footer styles */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.hidden{
+opacity :0;
+transition: all 1s;
+transform :translateX(100%);
+filter: blur(5px);
+}
+
+.show{
+opacity:1;
+filter:blur(0);
+transform :translateX(0);
+}
+
+
+    </style>
+</head>
+<body>
+<div class="logo">
+            <img src="" alt="Security Services Logo" style= width:70%; height:auto;>
+        </div>
+
+        <div class="header">
+        
+        <nav class="nav-links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#services_div">Services</a></li>
+                <li><a href="#contact_div">Contact Us</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">News & Events</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="hero-sec">
+
+        <div class="carousel">
+        <div class="carousel-slide">
+            <img src="http://www.specialskill.com.my/clients/specialskill/images/Flash/ban282201660453PM.jpg" alt="Image 1">
+        </div>
+        <div class="carousel-slide">
+            <img src="http://www.specialskill.com.my/clients/specialskill/images/Flash/ban382201660454PM.jpg" alt="Image 2">
+        </div>
+        <div class="carousel-slide">
+            <img src="http://www.specialskill.com.my/clients/specialskill/images/Flash/ban582201660455PM.jpg" alt="Image 3">
+        </div>
+    </div>
+        <div class="hero-text">
+            <a href="#contact_div" class="cta-button">Get Quote</a>
+        </div>
+ 
+    </div>
+
+    <div id="about_div">
+    <section id="about">
+
+        <h2>Welcome to Special Skill Security - Your Trusted Security Partner</h2>
+        <p class="tagline">🛡️ Protecting Your World, Securing Your Peace of Mind 🛡️</p>
+        <p>At Special Skill Security, we take pride in providing a wide range of high-quality security services tailored to your specific needs.</p><p>Our dedicated and highly trained team is committed to making your safety our top priority.</p>
+    </section>
+</div>
+
+<div class="talk">
+    <div class="text">
+        <h2 class="headline">🤝 Why Choose Special Skill Security? 🤝</h2>
+        <ul>
+            <li><strong>Expertise:</strong> Decades of experience in the security industry.</li>
+            <li><strong>Professionalism:</strong> Our team is dedicated, disciplined, and driven to provide the best security solutions.</li>
+            <li><strong>Customized Solutions:</strong> Tailored security plans to meet your specific needs.</li>
+            <li><strong>Cutting-Edge Technology:</strong> Utilizing the latest in security technology.</li>
+            <li><strong>24/7 Support:</strong> We're there for you, day or night.</li>
+        </ul>
+        <p>Secure your world with Special Skill Security <br>Contact us today for a consultation and let us design a security plan that works for you!</p>
+    </div>
+    <img src="" class="image" alt="Founder of the Company">
+</div>
+
+
+<div id="services">
+        <section class="hidden">
+            <h2>Our Services</h2>
+            <div class="service-card-container">
+                <div class="service-card">
+                    <h3>💪 Armed Guards</h3>
+                    <p>For enhanced security, our skilled armed guards are ready to protect your assets</p>
+                </div>
+                <div class="service-card">
+                    <h3>🕴️ Unarmed Guards</h3>
+                    <p>A subtle yet strong presence for safeguarding your premises</p>
+                </div>
+                <div class="service-card">
+                    <h3>🇳🇵 Nepalese Guards</h3>
+                    <p>Our Nepalese guards bring a unique set of skills and dedication to the table</p>
+                </div>
+                <div class="service-card">
+                    <h3>👤 Close Personal Protection / Bodyguards</h3>
+                    <p>When your personal safety is non-negotiable, our bodyguards have your back.</p>
+                </div>
+                <div class="service-card">
+                    <h3>📚 Security Training and Consultancy</h3>
+                    <p> Knowledge is power. Special Skill Security offers specialized security training and consultancy services to equip you with the skills and insights needed to enhance your security measures.</p>
+                </div>
+                <div class="service-card">
+                    <h3>🐕 Guard Dogs & Dog Handlers</h3>
+                    <p> Man's best friend becomes your ultimate protector when combined with our expert dog handlers.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+ 
+
+
+    <div id="contact_div">
+        <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need our services, please get in touch with us.</p>
+        <form>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea placeholder="Your Message"></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Security Services</p>
+    </footer>
+
+        <script>
+        const slides = document.querySelectorAll('.carousel-slide');
+        let slideIndex = 0;
+
+        function showSlide(n) {
+            slides.forEach(slide => {
+                slide.style.display = 'none';
+            });
+            if (n >= slides.length) {
+                slideIndex = 0;
+            }
+            if (n < 0) {
+                slideIndex = slides.length - 1;
+            }
+            slides[slideIndex].style.display = 'block';
+        }
+
+        function nextSlide() {
+            slideIndex++;
+            showSlide(slideIndex);
+        }
+
+        showSlide(slideIndex);
+
+        // Automatically advance to the next slide every 3 seconds (6000 milliseconds)
+        setInterval(nextSlide, 3000);
+
+
+
+
+    </script>
+</body>
+</html>
+

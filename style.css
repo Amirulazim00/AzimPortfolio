@@ -1,0 +1,106 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+.profile-img {
+    border-radius: 50%;
+    height: 50px;
+  }
+.portfolio-btn{
+    border-radius: 200px;
+    background-color: yellow;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 18px 80px 18px;
+    margin-bottom: 20px;
+}
+.b-img{
+    background-image: url('./images/hero-vec.png'); /* Correct way to set background image */
+    background-size: cover;
+    background-position: center;
+    max-width: 100%;
+}
+#hero-sec{
+    background-color: rgb(2, 2, 36);
+
+}
+.hero{
+    color: white;
+    display: block;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.modal-body img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%;
+  }
+
+h1{
+    color: white;
+    font-family: 'Gill Sans';
+}
+
+.bg-dark{
+    background-color: rgb(2, 2, 36)!important ;
+}
+
+#skill{
+    background-color:  rgb(2,2, 36);
+    padding-bottom: 2rem;
+}
+#icon-grid{
+    background-color:white ;
+    border-radius: 10px;
+}
+
+#icon-grid h2{
+    font-size: 42px;
+    text-align: center;
+}
+
+h2 a{
+    font-family:'Gill Sans';
+}
+
+
+
+#about h2{
+    font-size: 42px;
+    text-align: center;
+    padding-top:20px;
+}
+footer{
+    background-color: rgb(2, 2, 36)!important;
+    padding-top:20px;
+}
+
+footer h2{
+    color: white;
+}
+
+
+#about{
+    background-color: white;
+}
+
+.card-text-1{
+    font-weight: bolder;
+    font-size: 1.6em;
+    font-family: 'Gill Sans';
+}
+
+.album-text{
+    color: black;
+}
+.albumintro{
+    color: rgb(163, 162, 162);
+    font-size: 1.17em;
+}
